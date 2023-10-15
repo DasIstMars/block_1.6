@@ -1,0 +1,27 @@
+@import "/src/styles/fonts";
+@import "/src/styles/reset";
+@import "/src/styles/variables";
+
+@import "/src/styles/pamoika";
+
+@import "/src/styles/blocks/header";
+@import "/src/styles/blocks/button";
+@import "/src/styles/blocks/container";
+@import "/src/styles/blocks/mob-menu";
+@import "/src/styles/blocks/tablet-menu";
+@import "/src/styles/blocks/request-menu";
+@import "/src/styles/blocks/article";
+@import "/src/styles/blocks/main-request-menu";
+@import "/src/styles/blocks/main-nav";
+@import "/src/styles/blocks/textbox";
+@import "/src/styles/blocks/expand-button";
+@import "/src/styles/blocks/wrapper";
+body {
+    background-color: #F8F8F8;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    height: auto;
+}
+
+

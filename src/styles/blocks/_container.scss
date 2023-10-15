@@ -1,0 +1,28 @@
+.container {
+  padding: 16px;
+
+  @media (min-width: $table-width) {
+    padding: 24px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 32px;
+  }
+  &--header {
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid #d9fff5;
+  }
+  &--title {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 35px;
+      padding-top: 42px;
+      padding-bottom: 0;
+      padding-right: 30px;
+    }
+  }
+}
