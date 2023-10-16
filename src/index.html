@@ -19,7 +19,7 @@
           </a>
         </div>
         <div class="header__main-menu">
-          <div class="tablet-menu">
+          <div class="tablet-menu tablet-menu--hidden">
             <button class="tablet-menu__button button">
               <img src="images/call.svg" alt="Call" />
             </button>
@@ -42,16 +42,19 @@
       </div>
     </header>
     <main class="main">
+      <div class="fog fog--closed"></div>
       <div class="wrapper wrapper--side wrapper--closed">
         <div class="side-menu">
           <div class="side-menu__header">
             <div class="side-mob-menu">
-              <button class="side-mob-menu__button button">
-                <img src="images/cross.svg" alt="Close menu" />
-              </button>
-              <a class="side-mob-menu__logo" href="#">
-                <img src="images/logo.svg" alt="Logo" />
-              </a>
+              <div class="side-mob-menu__wrap">
+                <button class="side-mob-menu__button button">
+                  <img src="images/cross.svg" alt="Close menu" />
+                </button>
+                <a class="side-mob-menu__logo" href="#">
+                  <img src="images/logo.svg" alt="Logo" />
+                </a>
+              </div>
               <button class="side-mob-menu__button button">
                 <img src="images/search.svg" alt="Search" />
               </button>

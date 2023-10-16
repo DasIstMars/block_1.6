@@ -1,18 +1,28 @@
 .side-mob-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+  &__logo {
+    height: 51px;
+  }
+  &__wrap {
     display: flex;
     align-items: center;
-    height: 88px;
-    &__logo {
-      height: 51px;
-    }
-    &__button {
-      height: 40px;
+  }
+  &__button {
+    margin-left: 16px;
+    @media (min-width: $table-width) {
       margin-left: 24px;
-      &:first-of-type {
-        margin-right: 17px;
-      }
-      &:last-of-type {
-        margin-left: 78px;
+    }
+    &:first-of-type {
+      margin-right: 17px;
+    }
+    &:last-of-type {
+      margin-right: 16px;
+      @media (min-width: $table-width) {
+        margin-right: 24px;
       }
     }
   }
+}

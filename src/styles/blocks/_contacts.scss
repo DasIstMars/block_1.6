@@ -24,7 +24,10 @@
     letter-spacing: -0.6px;
   }
   &__lang {
+    margin-top: 8px;
+    @media (min-width: $table-width) {
     margin-top: 40px;
+    }
   }
   &__lang-button {
     height: 24px;

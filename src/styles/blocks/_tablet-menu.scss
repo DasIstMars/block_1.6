@@ -1,16 +1,17 @@
 .tablet-menu {
-  display: none;
+  &--hidden {
+    display: none;
+  }
 
   @media (min-width: $table-width) {
     display: flex;
     align-items: center;
     margin-right: 26px;
   }
-  
+
   &__button {
-    @media (min-width: $table-width) {
-      margin-right: 16px;
-    }
+    margin-right: 16px;
+
     &:first-of-type:hover {
       animation-name: bell;
       animation-duration: 100ms;
@@ -18,4 +19,3 @@
     }
   }
 }
-
