@@ -1,6 +1,7 @@
 @import "/src/styles/fonts";
 @import "/src/styles/reset";
 @import "/src/styles/variables";
+@import "/src/styles/animations";
 
 @import "/src/styles/pamoika";
 
@@ -16,6 +17,7 @@
 @import "/src/styles/blocks/textbox";
 @import "/src/styles/blocks/expand-button";
 @import "/src/styles/blocks/wrapper";
+
 body {
     background-color: #F8F8F8;
     font-family: "TT Lakes", sans-serif;
@@ -24,4 +26,10 @@ body {
     height: auto;
 }
 
-
+.main {
+    @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+}
