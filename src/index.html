@@ -42,13 +42,13 @@
       </div>
     </header>
     <main class="main">
-      <div class="fog fog--closed"></div>
+      <div class="fog fog--right-side fog--closed"></div>
       <div class="wrapper wrapper--side wrapper--closed">
         <div class="side-menu">
           <div class="side-menu__header">
             <div class="side-mob-menu">
               <div class="side-mob-menu__wrap">
-                <button class="side-mob-menu__button button">
+                <button class="side-mob-menu__button side-mob-menu__button--hide button">
                   <img src="images/cross.svg" alt="Close menu" />
                 </button>
                 <a class="side-mob-menu__logo" href="#">
@@ -108,7 +108,9 @@
                 <a class="contacts__phone-number" href="#">8 800 890 8900</a>
               </div>
               <div class="contacts__lang">
-                <button class="contacts__lang-button contacts__lang-button--active">
+                <button
+                  class="contacts__lang-button contacts__lang-button--active"
+                >
                   RU
                 </button>
                 <button class="contacts__lang-button">EN</button>
@@ -118,55 +120,62 @@
           </div>
         </div>
       </div>
-      <div class="callback">
-        <div class="callback__header">
-          <button class="callback__button button">
-              <img src="images/cross.svg" alt="Close menu" />
-            </button>
-          <h1 class="callback__title">Обратная связь</h1>
-        </div>
-        <form class="callback__form" action="" method="get">
-          <input
-            class="callback__input"
-            type="text"
-            name="username"
-            placeholder="Имя"
-          />
-          <input
-            class="callback__input"
-            type="text"
-            name="phone"
-            placeholder="Телефон"
-          />
-          <input
-            class="callback__input"
-            type="text"
-            name="email"
-            placeholder="Электронная почта"
-          />
-          <textarea
-            class="callback__area callback__input"
-            name="message"
-            placeholder="Сообщение"
-            rows="4"
-          ></textarea>
-        </form>
-        <p class="callback__oferta">
-          Нажимая “отправить”, вы даете согласие на <span class="callback__span">обработку персональных данных</span>
-          и соглашаетесь с нашей <span class="callback__span">политикой конфиденциальности</span>
-        </p>
-        <div class="callback__wrapper">
-          <button class="submit-button">
-            <span class="submit-button__text">отправить</span>
-              <img src="images/goside.svg" alt="Submit" />
-          </button>
-        </div>
-      </div>
-      <div class="callback">
+      <div class="wrapper wrapper--closed">
+        <div class="fog fog--left-side fog--closed"></div>
+        <div class="callback">
           <div class="callback__header">
             <button class="callback__button button">
-                <img src="images/cross.svg" alt="Close menu" />
-              </button>
+              <img src="images/cross.svg" alt="Close menu" />
+            </button>
+            <h1 class="callback__title">Обратная связь</h1>
+          </div>
+          <form class="callback__form" action="" method="get">
+            <input
+              class="callback__input"
+              type="text"
+              name="username"
+              placeholder="Имя"
+            />
+            <input
+              class="callback__input"
+              type="text"
+              name="phone"
+              placeholder="Телефон"
+            />
+            <input
+              class="callback__input"
+              type="text"
+              name="email"
+              placeholder="Электронная почта"
+            />
+            <textarea
+              class="callback__area callback__input"
+              name="message"
+              placeholder="Сообщение"
+              rows="4"
+            ></textarea>
+          </form>
+          <p class="callback__oferta">
+            Нажимая “отправить”, вы даете согласие на
+            <span class="callback__span">обработку персональных данных</span> и
+            соглашаетесь с нашей
+            <span class="callback__span">политикой конфиденциальности</span>
+          </p>
+          <div class="callback__wrapper">
+            <button class="submit-button">
+              <span class="submit-button__text">отправить</span>
+              <img src="images/goside.svg" alt="Submit" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper wrapper--closed">
+        <div class="fog fog--left-side fog--closed"></div>
+        <div class="callback">
+          <div class="callback__header">
+            <button class="callback__button button">
+              <img src="images/cross.svg" alt="Close menu" />
+            </button>
             <h1 class="callback__title">Заказать звонок</h1>
           </div>
           <form class="callback__form" action="" method="get">
@@ -178,22 +187,19 @@
             />
           </form>
           <p class="callback__oferta">
-            Нажимая “отправить”, вы даете согласие на <span class="callback__span">обработку персональных данных</span>
-            и соглашаетесь с нашей <span class="callback__span">политикой конфиденциальности</span>
+            Нажимая “отправить”, вы даете согласие на
+            <span class="callback__span">обработку персональных данных</span> и
+            соглашаетесь с нашей
+            <span class="callback__span">политикой конфиденциальности</span>
           </p>
           <div class="callback__wrapper">
             <button class="submit-button">
-                <span class="submit-button__text">отправить</span>
-                <img src="images/goside.svg" alt="Submit" />
+              <span class="submit-button__text">отправить</span>
+              <img src="images/goside.svg" alt="Submit" />
             </button>
           </div>
         </div>
-
-
-
-
-
-
+      </div>
       <div class="wrapper wrapper--main">
         <article class="article">
           <div class="container container--title">
@@ -410,10 +416,7 @@
             asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Deleniti quia voluptate exercitationem, dicta dolor et quod
             corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            quibusdam. Earum, id asperiores.exercitationem, dicta dolor et quod
             corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
             quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Deleniti quia voluptate
@@ -492,10 +495,93 @@
             asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Deleniti quia voluptate exercitationem, dicta dolor et quod
             corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.exercitationem, dicta dolor et quod corporis, autem
+            inventore ab quibusdam quo nisi? Ad quaerat numquam quibusdam.
+            Earum, id asperiores.Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Deleniti quia voluptate exercitationem, dicta
+            dolor et quod corporis, autem inventore ab quibusdam quo nisi? Ad
+            quaerat numquam quibusdam. Earum, id asperiores.Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
             quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
             asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Deleniti quia voluptate
+            exercitationem, dicta dolor et quod corporis, autem inventore ab
+            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
+            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deleniti quia voluptate exercitationem, dicta dolor et quod
+            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
+            quibusdam. Earum, id asperiores.exercitationem, dicta dolor et quod
             corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
             quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Deleniti quia voluptate
@@ -574,89 +660,11 @@
             asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Deleniti quia voluptate exercitationem, dicta dolor et quod
             corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
             quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Deleniti quia voluptate
             exercitationem, dicta dolor et quod corporis, autem inventore ab
             quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Deleniti quia voluptate
-            exercitationem, dicta dolor et quod corporis, autem inventore ab
-            quibusdam quo nisi? Ad quaerat numquam quibusdam. Earum, id
-            asperiores.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Deleniti quia voluptate exercitationem, dicta dolor et quod
-            corporis, autem inventore ab quibusdam quo nisi? Ad quaerat numquam
-            quibusdam. Earum, id asperiores.
+            asperiores.
           </p>
         </article>
       </div>

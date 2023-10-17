@@ -5,23 +5,24 @@
   height: 88px;
   &__logo {
     height: 51px;
+    @media (min-width: $desktop-width) {
+      margin-left: 22px;
+    }
   }
   &__wrap {
     display: flex;
     align-items: center;
   }
   &__button {
-    margin-left: 16px;
+    margin: 0 16px;
     @media (min-width: $table-width) {
-      margin-left: 24px;
+      margin: 0 24px;
     }
-    &:first-of-type {
+
+    &--hide {
       margin-right: 17px;
-    }
-    &:last-of-type {
-      margin-right: 16px;
-      @media (min-width: $table-width) {
-        margin-right: 24px;
+      @media (min-width: $desktop-width) {
+        display: none;
       }
     }
   }
