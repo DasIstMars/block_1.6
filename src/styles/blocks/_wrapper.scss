@@ -1,54 +1,31 @@
 .wrapper {
-  background: #f8f8f8;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+  }
   &--main {
+    background: #f8f8f8;
     @media (min-width: $desktop-width) {
       width: 1120px;
     }
   }
-  &--side {
-    @media (min-width: $desktop-width) {
-      display: block;
-      position: sticky;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      width: 320px;
-      overflow: auto;
-      height: 100vh;
-      background-color: #fff;
-      color: #1b1c21;
-      font-family: "TTLakes", sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: -0.2px;
-    }
-  }
   &--opened {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    overflow: auto;
     height: 100vh;
-    background-color: #fff;
-    color: #1b1c21;
-    font-family: "TTLakes", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    @media (min-width: $table-width) {
-      width: 320px;
-      box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
-        -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
-    }
   }
   &--closed {
     display: none;
+  }
+  &--side {
+    @media (min-width: $desktop-width) {
+      display: block;
+      width: 320px;
+    }
   }
 }

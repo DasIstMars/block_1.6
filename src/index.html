@@ -20,10 +20,10 @@
         </div>
         <div class="header__main-menu">
           <div class="tablet-menu tablet-menu--hidden">
-            <button class="tablet-menu__button button">
+            <button class="tablet-menu__button button button-phone">
               <img src="images/call.svg" alt="Call" />
             </button>
-            <button class="tablet-menu__button button">
+            <button class="tablet-menu__button button button-chat">
               <img src="images/chat.svg" alt="Chat" />
             </button>
             <button class="tablet-menu__button button">
@@ -42,89 +42,95 @@
       </div>
     </header>
     <main class="main">
-      <div class="fog fog--right-side fog--closed"></div>
       <div class="wrapper wrapper--side wrapper--closed">
+        <div class="fog fog--right-side"></div>
         <div class="side-menu">
-          <div class="side-menu__header">
-            <div class="side-mob-menu">
-              <div class="side-mob-menu__wrap">
-                <button class="side-mob-menu__button side-mob-menu__button--hide button">
-                  <img src="images/cross.svg" alt="Close menu" />
+          <div class="side-menu__container">
+            <div class="side-menu__header">
+              <div class="side-mob-menu">
+                <div class="side-mob-menu__wrap">
+                  <button
+                    class="side-mob-menu__button side-mob-menu__button--hidden button"
+                  >
+                    <img src="images/cross.svg" alt="Close menu" />
+                  </button>
+                  <a class="side-mob-menu__logo" href="#">
+                    <img src="images/logo.svg" alt="Logo" />
+                  </a>
+                </div>
+                <button class="side-mob-menu__button button">
+                  <img src="images/search.svg" alt="Search" />
                 </button>
-                <a class="side-mob-menu__logo" href="#">
-                  <img src="images/logo.svg" alt="Logo" />
-                </a>
               </div>
-              <button class="side-mob-menu__button button">
-                <img src="images/search.svg" alt="Search" />
-              </button>
+              <nav class="side-nav">
+                <ul class="side-nav__list">
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#">Ремонт техники</a>
+                  </li>
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#">Услуги и сервисы</a>
+                  </li>
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#"
+                      >Корпоративным клиентам</a
+                    >
+                  </li>
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#">Продавцам техники</a>
+                  </li>
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#">Партнерам</a>
+                  </li>
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#">Производителям</a>
+                  </li>
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#">Наши сервисные центры</a>
+                  </li>
+                  <li class="side-nav__item">
+                    <a class="side-nav__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-            <nav class="side-nav">
-              <ul class="side-nav__list">
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Ремонт техники</a>
-                </li>
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Услуги и сервисы</a>
-                </li>
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Корпоративным клиентам</a>
-                </li>
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Продавцам техники</a>
-                </li>
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Партнерам</a>
-                </li>
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Производителям</a>
-                </li>
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Наши сервисные центры</a>
-                </li>
-                <li class="side-nav__item">
-                  <a class="side-nav__link" href="#">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="side-menu__footer">
-            <div class="tablet-menu">
-              <button class="tablet-menu__button button">
-                <img src="images/call.svg" alt="Call" />
-              </button>
-              <button class="tablet-menu__button button">
-                <img src="images/chat.svg" alt="Chat" />
-              </button>
-              <button class="tablet-menu__button button">
-                <img src="images/profile.svg" alt="Profile" />
-              </button>
-            </div>
-            <div class="contacts">
-              <div class="contacts__mail">
-                <a class="contacts__mail-text" href="#">mail@cps.com</a>
-              </div>
-              <div class="contacts__phone">
-                <a class="contacts__phone-number" href="#">8 800 890 8900</a>
-              </div>
-              <div class="contacts__lang">
-                <button
-                  class="contacts__lang-button contacts__lang-button--active"
-                >
-                  RU
+            <div class="side-menu__footer">
+              <div class="tablet-menu">
+                <button class="tablet-menu__button button button-phone">
+                  <img src="images/call.svg" alt="Call" />
                 </button>
-                <button class="contacts__lang-button">EN</button>
-                <button class="contacts__lang-button">CH</button>
+                <button class="tablet-menu__button button button-chat">
+                  <img src="images/chat.svg" alt="Chat" />
+                </button>
+                <button class="tablet-menu__button button">
+                  <img src="images/profile.svg" alt="Profile" />
+                </button>
+              </div>
+              <div class="contacts">
+                <div class="contacts__mail">
+                  <a class="contacts__mail-text" href="#">mail@cps.com</a>
+                </div>
+                <div class="contacts__phone">
+                  <a class="contacts__phone-number" href="#">8 800 890 8900</a>
+                </div>
+                <div class="contacts__lang">
+                  <button
+                    class="contacts__lang-button contacts__lang-button--active"
+                  >
+                    RU
+                  </button>
+                  <button class="contacts__lang-button">EN</button>
+                  <button class="contacts__lang-button">CH</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="wrapper wrapper--closed">
-        <div class="fog fog--left-side fog--closed"></div>
+      <div class="wrapper wrapper-feedback wrapper--closed">
+        <div class="fog fog--left-side"></div>
         <div class="callback">
           <div class="callback__header">
-            <button class="callback__button button">
+            <button class="callback__button button button-close">
               <img src="images/cross.svg" alt="Close menu" />
             </button>
             <h1 class="callback__title">Обратная связь</h1>
@@ -169,11 +175,11 @@
           </div>
         </div>
       </div>
-      <div class="wrapper wrapper--closed">
-        <div class="fog fog--left-side fog--closed"></div>
+      <div class="wrapper wrapper-call wrapper--closed">
+        <div class="fog fog--left-side"></div>
         <div class="callback">
           <div class="callback__header">
-            <button class="callback__button button">
+            <button class="callback__button button button-close">
               <img src="images/cross.svg" alt="Close menu" />
             </button>
             <h1 class="callback__title">Заказать звонок</h1>
