@@ -24,6 +24,9 @@
 @import "/src/styles/blocks/fog";
 @import "/src/styles/blocks/callback";
 @import "/src/styles/blocks/submit-button";
+@import "/src/styles/blocks/section";
+@import "/src/styles/blocks/section-title";
+@import "/src/styles/blocks/section-nav";
 
 body {
   font-family: "TT Lakes", sans-serif;
@@ -41,4 +44,9 @@ body {
     justify-content: center;
     position: relative;
   }
+}
+
+
+.lorum {
+  margin-top: 200px;
 }

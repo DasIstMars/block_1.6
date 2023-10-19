@@ -1,0 +1,65 @@
+.section-nav {
+  width: auto;
+  height: 126px;
+  padding-top: 16px;
+  padding-left: 16px;
+    
+  @media (min-width: $table-width) {
+    height: 185px;
+    padding-top: 24px;
+    padding-left: 32px;
+
+    &--minimalize {
+      height: 185px;
+    }
+    &--expanded {
+      height: auto;
+    }
+  }
+  @media (min-width: $desktop-width) {
+    height: 185px;
+    padding-top: 24px;
+    padding-left: 32px;
+  }
+}
+
+.section-nav__list {
+    border: 1px solid blue;
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px 24px;
+    overflow: clip;
+  }
+  @media (min-width: $desktop-width) {
+    gap: 16px 32px;
+  }
+}
+
+.section-nav__link {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: url("/src/images/go.svg") no-repeat;
+}
+.section-nav__item {
+  width: 240px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px; /* ??? */
+
+  @media (min-width: $table-width) {
+      width: 224px;
+  }
+  @media (min-width: $desktop-width) {
+      width: 240px;
+  }
+}
+

@@ -1,0 +1,10 @@
+.section {
+  height: 235px;
+  border-top: 1px solid #d9fff5;
+  border-bottom: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  border: 1px solid red;
+  @media (min-width: $desktop-width) {
+    height: auto;
+  }
+}

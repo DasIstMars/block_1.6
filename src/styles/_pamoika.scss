@@ -1,0 +1,61 @@
+/*SECTION*/
+
+/*TITLE*/
+
+/*SECTION_NAV*/
+
+
+/*some of swiper*/
+@media (min-width: 768px) {
+    .swiper-pagination {
+        display: none;
+    }
+}
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    flex-shrink: 0;
+    background-color: #b5b6bc;  
+}
+.section-section__button {
+    display: none;
+}
+
+/*expand button*/
+@media (min-width: 768px) {
+    .section__button {
+        display: flex;
+        gap: 9px;
+        margin: 24px;
+        margin-bottom: 34px;
+    }
+    .section__button--minimalize {
+        margin-left: 32px;
+        margin-bottom: 34px;
+    }
+    .section__button--expanded {
+        margin-bottom: 14px;
+        margin-top: 46px;
+    }
+    .section__expand-button__img--top {
+        transform: rotate(180deg);
+    }
+}
+@media (min-width: 1120px) {
+    .section__button {
+        display: flex;
+        gap: 9px;
+        margin-left: 32px;
+    }
+
+}
+.section__expand-button__text {
+    font-family: "TT Lakes", sansection-serif;
+    color: #1B1C21;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
