@@ -1,5 +1,8 @@
 import "normalize.css";
+import 'swiper/css';
+import 'swiper/css/pagination';
 import "./styles/main.scss";
+
 
 let openMobMenuButton = document.querySelector(".mob-menu__button");
 let closeMobMenuButton = document.querySelector(".side-mob-menu__button");
@@ -52,7 +55,7 @@ for (let i = 0; i < closeButton.length; i++) {
   };
 }
 
-/*!!!!! SWIPER !!!!!*/
+
 let mySwiper;
 const breakpoint = window.matchMedia( '(min-width:768px)' );
 const breakpointChecker = function() {
@@ -81,3 +84,29 @@ const enableSwiper = function() {
 };
 breakpoint.addListener(breakpointChecker);
 breakpointChecker();
+
+
+
+
+
+
+
+/*-------------*/
+let expandButton = document.querySelector('.section__expand-button');
+let expandSection = document.querySelector('.section--minimalize');
+let expandNav = document.querySelector('.section-nav--minimalize');
+let expandButtonMinimalize = document.querySelector('.section__button--minimalize');
+let expantButtonText = document.querySelector('.section__expand-button-text');
+let expandButtonImg = document.querySelector('.section__expand-button-img--bottom');
+
+expandButton.onclick = function() {
+  expandNav.classList.toggle('section-nav--expanded');
+  expandSection.classList.toggle('section--expanded');
+  expandButtonMinimalize.classList.toggle('section__button--expanded');
+  expandButtonImg.classList.toggle('section__expand-button-img--top');
+  if (expantButtonText.textContent == 'Показать все') {
+    expantButtonText.textContent = 'Скрыть';
+  } else {
+    expantButtonText.textContent = 'Показать все';
+  } 
+};

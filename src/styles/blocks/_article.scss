@@ -42,7 +42,7 @@
   background-size: 100% auto;
   background-position: 0 45%;
 
-  @media (min-width: 768px) {
+  @media (min-width: $table-width) {
     border-radius: 6px;
   }
 }
@@ -51,7 +51,7 @@
   width: 100vw;
   margin-right: 24px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $table-width) {
     width: 50vw;
     max-width: 560px;
   }
