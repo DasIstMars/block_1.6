@@ -21,5 +21,8 @@
     }
     &__text {
         font-weight: normal;
+    }
+    &--expanded {
+        height: auto;
     } 
 }

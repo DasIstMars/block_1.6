@@ -4,6 +4,9 @@
   padding-top: 16px;
   padding-left: 16px;
 
+  &--square {
+    height: 216px;
+  }
   @media (min-width: $table-width) {
     height: 185px;
     padding-top: 24px;
@@ -42,6 +45,9 @@
   width: 40px;
   border-radius: 50%;
   background: url("/src/images/go.svg") no-repeat;
+  &--square {
+    align-self: flex-end;
+  }
 }
 .section-nav__item {
   width: 240px;
@@ -54,7 +60,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px; /* ??? */
+  padding: 16px; /* ??? */
 
   @media (min-width: $table-width) {
     width: 224px;
@@ -62,4 +68,13 @@
   @media (min-width: $desktop-width) {
     min-width: 240px;
   }
+
+  &--square {
+    height: 160px;
+    flex-shrink: 0;
+  }
+}
+
+.section-nav__span {
+  align-self: flex-start;
 }

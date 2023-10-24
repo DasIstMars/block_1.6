@@ -27,6 +27,7 @@
     position: absolute;
     width: 24px;
     height: 81px;
+    
     background: linear-gradient(
       270deg,
       #f8f8f8 16.84%,
@@ -34,9 +35,29 @@
     );
     top: 92px;
     right: 0;
-    z-index: 3;
+    z-index: 13;
     @media (min-width: $table-width) {
       display: none;
+    }
+  }
+  &--square{
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 169px;
+      
+      background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0) 100%
+      );
+      top: 92px;
+      right: 0;
+      z-index: 13;
+      @media (min-width: $table-width) {
+        display: none;
+      }
     }
   }
 }

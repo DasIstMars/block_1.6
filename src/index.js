@@ -1,32 +1,30 @@
 import "normalize.css";
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 import "./styles/main.scss";
-
 
 let openMobMenuButton = document.querySelector(".mob-menu__button");
 let closeMobMenuButton = document.querySelector(".side-mob-menu__button");
 let sideMenuWrapper = document.querySelector(".wrapper--side");
 
-let callWraper = document.querySelector('.wrapper-call');
-let feedbackWraper = document.querySelector('.wrapper-feedback');
+let callWraper = document.querySelector(".wrapper-call");
+let feedbackWraper = document.querySelector(".wrapper-feedback");
 let fogRightSide = document.querySelector(".fog--right-side");
 let fogLeftSide = document.querySelectorAll(".fog--left-side");
 
-
 let phoneButton = document.querySelectorAll(".button-phone");
 let chatButton = document.querySelectorAll(".button-chat");
-let closeButton = document.querySelectorAll(".button-close"); 
+let closeButton = document.querySelectorAll(".button-close");
 
 for (let i = 0; i < phoneButton.length; i++) {
   phoneButton[i].onclick = function () {
     callWraper.classList.replace("wrapper--closed", "wrapper--opened");
-  }
+  };
 }
 for (let i = 0; i < chatButton.length; i++) {
   chatButton[i].onclick = function () {
     feedbackWraper.classList.replace("wrapper--closed", "wrapper--opened");
-  }
+  };
 }
 
 openMobMenuButton.onclick = function () {
@@ -34,79 +32,82 @@ openMobMenuButton.onclick = function () {
 };
 
 closeMobMenuButton.onclick = function () {
-  sideMenuWrapper.classList.replace("wrapper--opened" , "wrapper--closed");
+  sideMenuWrapper.classList.replace("wrapper--opened", "wrapper--closed");
 };
 
 fogRightSide.onclick = function () {
-  sideMenuWrapper.classList.replace("wrapper--opened" , "wrapper--closed");
+  sideMenuWrapper.classList.replace("wrapper--opened", "wrapper--closed");
 };
-
 
 for (let i = 0; i < fogLeftSide.length; i++) {
   fogLeftSide[i].onclick = function () {
-    callWraper.classList.replace("wrapper--opened" , "wrapper--closed");
-    feedbackWraper.classList.replace("wrapper--opened" , "wrapper--closed");
+    callWraper.classList.replace("wrapper--opened", "wrapper--closed");
+    feedbackWraper.classList.replace("wrapper--opened", "wrapper--closed");
   };
 }
 for (let i = 0; i < closeButton.length; i++) {
   closeButton[i].onclick = function () {
-    callWraper.classList.replace("wrapper--opened" , "wrapper--closed");
-    feedbackWraper.classList.replace("wrapper--opened" , "wrapper--closed");
+    callWraper.classList.replace("wrapper--opened", "wrapper--closed");
+    feedbackWraper.classList.replace("wrapper--opened", "wrapper--closed");
   };
 }
 
-
-let mySwiper;
-const breakpoint = window.matchMedia( '(min-width:768px)' );
-const breakpointChecker = function() {
-  if ( breakpoint.matches === true ) {
-     if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
-     return;
-  } else if ( breakpoint.matches === false ) {
-     return enableSwiper();
-  }
+const breakpoint = window.matchMedia("(max-width:768px)");
+const enableSwiper = function () {
+  mySwiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    speed: 500,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true,
+    },
+  });
 };
-const enableSwiper = function() {
-  mySwiper = new Swiper('.swiper', {
-      loop: true,
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      speed: 500,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-          delay: 2000,
-          disableOnInteraction: true,
-      },
-    });
-};
-breakpoint.addListener(breakpointChecker);
-breakpointChecker();
 
-
-
-
-
-
+if (breakpoint.matches) {
+  enableSwiper();
+}
 
 /*-------------*/
-let expandButton = document.querySelector('.section__expand-button');
-let expandSection = document.querySelector('.section--minimalize');
-let expandNav = document.querySelector('.section-nav--minimalize');
-let expandButtonMinimalize = document.querySelector('.section__button--minimalize');
-let expantButtonText = document.querySelector('.section__expand-button-text');
-let expandButtonImg = document.querySelector('.section__expand-button-img--bottom');
+let expandButton = document.querySelectorAll(".expand-button");
+let expandText = document.querySelector(".textbox")
+let expandSection = document.querySelectorAll(".section--minimalize");
+let expandNav = document.querySelectorAll(".section-nav--minimalize");
+let expandButtonMinimalize = document.querySelectorAll(
+  ".expand-button--minimalize"
+);
+let expantButtonText = document.querySelectorAll(".expand-button__text");
+let expandButtonImg = document.querySelectorAll(
+  ".expand-button__img"
+);
 
-expandButton.onclick = function() {
-  expandNav.classList.toggle('section-nav--expanded');
-  expandSection.classList.toggle('section--expanded');
-  expandButtonMinimalize.classList.toggle('section__button--expanded');
-  expandButtonImg.classList.toggle('section__expand-button-img--top');
-  if (expantButtonText.textContent == 'Показать все') {
-    expantButtonText.textContent = 'Скрыть';
+for (let i = 1; i < 3; i++) {
+  expandButton[i].onclick = function () {
+    expandNav[i-1].classList.toggle("section-nav--expanded");
+    expandSection[i-1].classList.toggle("section--expanded");
+    expandButtonMinimalize[i-1].classList.toggle("expand-button--expanded");
+    expandButtonImg[i].classList.toggle("expand-button__img--top");
+    if (expantButtonText[i].textContent == "Показать все") {
+      expantButtonText[i].textContent = "Скрыть";
+    } else {
+      expantButtonText[i].textContent = "Показать все";
+    }
+  };
+}
+
+expandButton[0].onclick = function () {
+  expandText.classList.toggle("textbox--expanded");
+  expandButton[0].classList.toggle("expand-button--expanded");
+  expandButtonImg[0].classList.toggle("expand-button__img--top");
+  if (expantButtonText[0].textContent == "Читать далее") {
+    expantButtonText[0].textContent = "Скрыть";
   } else {
-    expantButtonText.textContent = 'Показать все';
-  } 
+    expantButtonText[0].textContent = "Читать далее";
+  }
 };
