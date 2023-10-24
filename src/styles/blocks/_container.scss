@@ -25,4 +25,12 @@
       padding-right: 30px;
     }
   }
+  &--footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @media (min-width: $table-width) {
+      flex-direction: row;
+    }
+  }
 }
