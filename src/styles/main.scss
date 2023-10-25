@@ -3,7 +3,7 @@
 @import "/src/styles/variables";
 @import "/src/styles/animations";
 
-@import "/src/styles/pamoika";
+
 
 @import "/src/styles/blocks/header";
 @import "/src/styles/blocks/button";
@@ -29,6 +29,8 @@
 @import "/src/styles/blocks/section-nav";
 @import "/src/styles/blocks/swiper";
 @import "/src/styles/blocks/footer";
+
+@import "/src/styles/pamoika";
 
 body {
   font-family: "TT Lakes", sans-serif;

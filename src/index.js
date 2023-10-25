@@ -52,7 +52,7 @@ for (let i = 0; i < closeButton.length; i++) {
   };
 }
 
-const breakpoint = window.matchMedia("(max-width:768px)");
+const breakpoint = window.matchMedia("(max-width:767px)");
 const enableSwiper = function () {
   mySwiper = new Swiper(".swiper", {
     loop: true,
