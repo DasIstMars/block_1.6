@@ -3,6 +3,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./styles/main.scss";
 
+
+/* Wrapper_open/close_buttons*/
+let body = document.querySelector(".body")
 let openMobMenuButton = document.querySelector(".mob-menu__button");
 let closeMobMenuButton = document.querySelector(".side-mob-menu__button");
 let sideMenuWrapper = document.querySelector(".wrapper--side");
@@ -16,42 +19,67 @@ let phoneButton = document.querySelectorAll(".button-phone");
 let chatButton = document.querySelectorAll(".button-chat");
 let closeButton = document.querySelectorAll(".button-close");
 
+let scrollFlag = 0;
+
 for (let i = 0; i < phoneButton.length; i++) {
   phoneButton[i].onclick = function () {
     callWraper.classList.replace("wrapper--closed", "wrapper--opened");
+    body.classList.add('body--scroll');
+    scrollFlag++;
   };
 }
+
 for (let i = 0; i < chatButton.length; i++) {
   chatButton[i].onclick = function () {
     feedbackWraper.classList.replace("wrapper--closed", "wrapper--opened");
+    body.classList.add('body--scroll');
+    scrollFlag++;
   };
 }
 
 openMobMenuButton.onclick = function () {
   sideMenuWrapper.classList.replace("wrapper--closed", "wrapper--opened");
+  body.classList.add('body--scroll');
+  scrollFlag++;
 };
 
 closeMobMenuButton.onclick = function () {
   sideMenuWrapper.classList.replace("wrapper--opened", "wrapper--closed");
+  if (scrollFlag < 2) {
+    body.classList.remove('body--scroll');
+  }
+  scrollFlag--;
 };
 
 fogRightSide.onclick = function () {
   sideMenuWrapper.classList.replace("wrapper--opened", "wrapper--closed");
+  if (scrollFlag < 2) {
+    body.classList.remove('body--scroll');
+  }
+  scrollFlag--;
 };
 
 for (let i = 0; i < fogLeftSide.length; i++) {
   fogLeftSide[i].onclick = function () {
     callWraper.classList.replace("wrapper--opened", "wrapper--closed");
     feedbackWraper.classList.replace("wrapper--opened", "wrapper--closed");
+    if (scrollFlag < 2) {
+      body.classList.remove('body--scroll');
+    }
+    scrollFlag--;
   };
 }
 for (let i = 0; i < closeButton.length; i++) {
   closeButton[i].onclick = function () {
     callWraper.classList.replace("wrapper--opened", "wrapper--closed");
     feedbackWraper.classList.replace("wrapper--opened", "wrapper--closed");
+    if (scrollFlag < 2) {
+      body.classList.remove('body--scroll');
+    }
+    scrollFlag--;
   };
 }
-
+/*Swiper*/ 
 const breakpoint = window.matchMedia("(max-width:767px)");
 const enableSwiper = function () {
   mySwiper = new Swiper(".swiper", {
@@ -74,7 +102,7 @@ if (breakpoint.matches) {
   enableSwiper();
 }
 
-/*-------------*/
+/*Expand_buttons*/
 let expandButton = document.querySelectorAll(".expand-button");
 let expandText = document.querySelector(".textbox")
 let expandSection = document.querySelectorAll(".section--minimalize");

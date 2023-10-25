@@ -3,8 +3,6 @@
 @import "/src/styles/variables";
 @import "/src/styles/animations";
 
-
-
 @import "/src/styles/blocks/header";
 @import "/src/styles/blocks/button";
 @import "/src/styles/blocks/container";
@@ -32,13 +30,16 @@
 
 @import "/src/styles/pamoika";
 
-body {
+.body {
   font-family: "TT Lakes", sans-serif;
   font-weight: 500;
   font-style: normal;
   height: auto;
   @media (min-width: $desktop-width) {
     background: linear-gradient(90deg, #fff 50%, #f8f8f8 50%);
+  }
+  &--scroll {
+    overflow: hidden;
   }
 }
 

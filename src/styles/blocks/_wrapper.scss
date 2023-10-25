@@ -6,6 +6,9 @@
   &--main {
     background: #f8f8f8;
     @media (min-width: $desktop-width) {
+      width: calc(100vw - 320px);
+    }
+    @media (min-width: 1440px) {
       width: 1120px;
     }
   }
